@@ -37,21 +37,11 @@
                 cursor: pointer;
                 box-shadow: 5px 5px 12px rgb(0, 0, 0, 0.6);
 
-                .img-container {
+                img {
                     height: 150px;
-                    padding: 5px;
-
-                    img {
-                        height: 100%;
-                        width: 100%;
-                        border-radius: 5px;
-                        transition: 0.2s linear;
-                        object-fit: cover;
-                    }
-                }
-
-                .img-container:hover img {
-                    scale: 1.01;
+                    width: 100%;
+                    border-radius: 5px;
+                    object-fit: cover;
                 }
 
                 .dis-tag {
@@ -138,7 +128,7 @@
         @media (max-width: 425px) {
 
             .card {
-                max-height: 285px;
+                min-height: 340px;
                 max-width: 130px;
 
                 .dis-tag {
@@ -147,14 +137,11 @@
                     position: absolute;
                 }
 
-                .img-container {
-                    height: 100px;
-
-                    img {
-                        object-fit: cover;
-                        height: 100vh;
-                        width: 100vw;
-                    }
+                img {
+                    height: 0px;
+                    width: 100%;
+                    border-radius: 5px;
+                    object-fit: cover;
                 }
 
                 .product-details {
@@ -189,9 +176,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -211,9 +196,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -233,9 +216,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -255,9 +236,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -277,9 +256,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -299,9 +276,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -321,9 +296,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -343,9 +316,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -365,9 +336,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -387,9 +356,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -409,9 +376,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -431,9 +396,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -453,9 +416,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -475,9 +436,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -497,9 +456,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -519,9 +476,7 @@
 
             <span class="dis-tag">35% off</span>
 
-            <div class="img-container">
-                <img src="44.png" alt="img">
-            </div>
+            <img src="44.png" alt="img">
 
             <div class="product-details">
 
@@ -536,6 +491,227 @@
             </div>
             <button class="cartBtn" type="button">Add to cart</button>
         </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <img src="44.png" alt="img">
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+
 
     </div>
 </body>
