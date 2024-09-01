@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: wheat;
+            height: 100vh;
+            width: 100vw;
+            padding: 10px;
+        }
+
+        .flexBox {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .card {
+                height: 300px;
+                width: 230px;
+                background-color: white;
+                padding: 5px;
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                box-shadow: 5px 5px 12px rgb(0, 0, 0, 0.6);
+
+                .img-container {
+                    height: 150px;
+                    padding: 5px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 5px;
+                        transition: 0.2s linear;
+                        object-fit: cover;
+                    }
+                }
+
+                .img-container:hover img {
+                    scale: 1.01;
+                }
+
+                .dis-tag {
+                    background-color: yellow;
+                    padding: 5px 35px;
+                    font-weight: bold;
+                    position: absolute;
+                    transform: rotate(45deg);
+                    top: 14px;
+                    right: -40px;
+                    text-transform: uppercase;
+                    z-index: 1;
+                }
+
+                .product-details {
+
+                    .brandName {
+                        text-transform: capitalize;
+                        padding: 3px 10px;
+                        font-weight: bold;
+                    }
+
+                    .productName {
+                        padding: 3px 10px;
+                        font-size: 17px;
+                    }
+
+                    .price-details {
+                        padding: 3px 10px;
+
+                        .disc-price {
+                            margin-right: 6px;
+                            font-size: 25px;
+                            color: blue;
+                        }
+
+                        .act-price {
+                            text-decoration: line-through;
+                            color: red;
+                        }
+                    }
+                }
+
+                .cartBtn {
+                    display: block;
+                    margin: 10px auto;
+                    border: 2px solid rgba(127, 50, 95, 0.907);
+                    font-size: 16.3px;
+                    border-radius: 8px;
+                    padding: 8px;
+                    color: white;
+                    background-color: rgba(127, 50, 95, 0.907);
+                    position: relative;
+                    z-index: 2;
+                    font-weight: 500;
+                    transition: 0.3s linear;
+                    cursor: pointer;
+                }
+
+                .cartBtn::after {
+                    content: "";
+                    height: 100%;
+                    width: 0%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: white;
+                    border-radius: 8px;
+                    transition: 0.3s linear;
+                }
+
+                .cartBtn:hover {
+                    color: rgba(127, 50, 95, 0.907);
+                    outline: 1px solid rgba(127, 50, 95, 0.907);
+                }
+
+                .cartBtn:hover::after {
+                    width: 100%;
+                    z-index: -2;
+                }
+            }
+        }
+
+        @media (max-width: 425px) {
+
+            .card {
+                max-height: 285px;
+                max-width: 130px;
+
+                .dis-tag {
+                    font-size: 11px;
+                    left: 50px;
+                    position: absolute;
+                }
+
+                .img-container {
+                    max-height: 100px;
+
+                    img {
+                        object-fit: cover;
+                        height: 100vh;
+                        width: 100vw;
+                    }
+                }
+
+                .product-details {
+
+                    .price-details {
+                        display: block;
+
+                        .disc-price {
+                            font-weight: bolder;
+                            color: blue;
+                        }
+
+                        .act-price {
+                            font-size-adjust: 10px;
+                        }
+                    }
+                }
+            }
+
+            .card button.cartBtn {
+                background-color: red;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="productContainer" class="flexBox">
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+        <div class="card">
+            <i class="favHeart fa-regular fa-heart"></i>
+
+            <span class="dis-tag">35% off</span>
+
+            <div class="img-container">
+                <img src="44.png" alt="img">
+            </div>
+
+            <div class="product-details">
+
+                <p class="brandName">covergirl</p>
+                <p class="productName">CoverGirl Ink...</p>
+
+                <div class="price-details">
+                    <span class="disc-price">$. 30.00</span>
+                    <span class="act-price">$. 40.00</span>
+                </div>
+
+            </div>
+            <button class="cartBtn" type="button">Add to cart</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
